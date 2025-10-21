@@ -124,6 +124,9 @@ const Portfolio = () => {
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
                 Developer
               </span>
+              <br/>
+              <br/>
+              <span>Aryan </span> <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent' >Pachandi</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
               Crafting exceptional digital experiences with cutting-edge technology and innovative design
@@ -135,10 +138,16 @@ const Portfolio = () => {
               <span className="relative z-10">View My Work</span>
               <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
-            <button className="group px-8 py-4 border border-white/20 rounded-full text-white font-semibold backdrop-blur-sm hover:border-white/40 transition-all duration-300 hover:scale-105">
-              Download CV
-              <ExternalLink className="inline-block ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
+            <a
+  href="/Aryan_Pachandi_CV.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group px-8 py-4 border border-white/20 rounded-full text-white font-semibold backdrop-blur-sm hover:border-white/40 transition-all duration-300 hover:scale-105"
+>
+  Download CV
+  <ExternalLink className="inline-block ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+</a>
+
           </div>
 
           <div className="animate-bounce">
@@ -160,7 +169,7 @@ const Portfolio = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a passionate full-stack developer with over 5 years of experience creating digital solutions that combine beautiful design with powerful functionality. My journey spans from pixel-perfect frontend interfaces to robust backend architectures.
+                I'm a passionate full-stack developer , creating digital solutions that combine beautiful design with powerful functionality. My journey spans from pixel-perfect frontend interfaces to robust backend architectures.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 When I'm not coding, you'll find me exploring the latest design trends, contributing to open-source projects, or mentoring aspiring developers in my community.
@@ -257,7 +266,7 @@ const Portfolio = () => {
 
           <div className="flex justify-center space-x-8 mb-16">
             {[
-              { icon: Mail, label: 'Email', href: 'pachandiaryan@gmail.com' },
+              { icon: Mail, label: 'Email', href: 'mailto:pachandiaryan@gmail.com' },
               { icon: Github, label: 'GitHub', href: 'https://github.com/AryanPachandi/' },
               { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/aryan-pachandi-bb7b6822a/' }
             ].map((social) => {
@@ -285,7 +294,10 @@ const Portfolio = () => {
       <footer className="border-t border-white/10 py-8">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="text-gray-400">
-            © 2025 Portfolio. Crafted with passion and innovation.
+            © 2025 Portfolio Aryan pachandi.
+          </p>
+          <p className="text-gray-400">
+            Crafted with passion and innovation.
           </p>
         </div>
       </footer>
