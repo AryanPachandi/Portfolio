@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Mail, Github, Linkedin, ExternalLink, Menu, X, Code, Palette, Zap } from 'lucide-react';
 import {TextRevealCardPreview} from "./TextRevealCardPreview.jsx";
+import {LayoutTextFlipDemo} from "./Layout.jsx"
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -117,7 +118,7 @@ const Portfolio = () => {
       <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="text-center z-10 max-w-4xl mx-auto px-6">
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fade-in">
+            {/* <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fade-in">
               <span className="bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent">
                 Creative
               </span>
@@ -125,7 +126,10 @@ const Portfolio = () => {
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
                 Developer
               </span>
-            </h1>
+            </h1> */}
+            <LayoutTextFlipDemo/>
+            <br/> 
+            <br/>
             {/* <TextRevealCardPreview/> */}
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
               Crafting exceptional digital experiences with cutting-edge technology and innovative design
