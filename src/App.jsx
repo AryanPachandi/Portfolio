@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Mail, Github, Linkedin, ExternalLink, Menu, X, Code, Palette, Zap } from 'lucide-react';
+import {TextRevealCardPreview} from "./TextRevealCardPreview.jsx";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,7 +65,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              Portfolio
+              Aryan Pachandi
             </div>
 
             <div className="hidden md:flex space-x-8">
@@ -124,10 +125,8 @@ const Portfolio = () => {
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
                 Developer
               </span>
-              <br/>
-              <br/>
-              <span>Aryan </span> <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent' >Pachandi</span>
             </h1>
+            {/* <TextRevealCardPreview/> */}
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
               Crafting exceptional digital experiences with cutting-edge technology and innovative design
             </p>
