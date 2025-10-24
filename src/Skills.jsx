@@ -1,4 +1,4 @@
-import{ FaJsSquare, FaNodeJs, FaGitAlt, FaReact, FaDocker, FaNpm , FaJava  , FaAws , FaGithub ,FaCloud, FaAngular } from 'react-icons/fa';
+import { FaJsSquare, FaNodeJs, FaGitAlt, FaReact, FaDocker, FaNpm, FaJava, FaAws, FaGithub, FaCloud, FaAngular } from 'react-icons/fa';
 import {
   SiNextdotjs,
   SiTypescript,
@@ -10,131 +10,67 @@ import {
   SiTurborepo,
   SiLinux,
   SiTailwindcss
-
 } from "react-icons/si";
 
+export default function Skills() {
+  const techStack = [
+    { Icon: FaJsSquare, name: "JavaScript", color: "text-yellow-500" },
+    { Icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
+    { Icon: FaNodeJs, name: "Node.js", color: "text-green-500" },
+    { Icon: FaGitAlt, name: "Git", color: "text-orange-500" },
+    { Icon: FaReact, name: "React", color: "text-blue-400" },
+    { Icon: FaAngular, name: "Angular", color: "text-red-500" },
+    { Icon: FaDocker, name: "Docker", color: "text-blue-500" },
+    { Icon: FaNpm, name: "NPM", color: "text-red-600" },
+    { Icon: FaJava, name: "Java", color: "text-red-500" },
+    { Icon: SiTailwindcss, name: "Tailwind", color: "text-cyan-400" },
+    { Icon: FaAws, name: "AWS", color: "text-orange-400" },
+    { Icon: FaCloud, name: "Cloud", color: "text-blue-400" },
+    { Icon: FaGithub, name: "GitHub", color: "text-white" },
+    { Icon: SiKubernetes, name: "Kubernetes", color: "text-blue-500" },
+    { Icon: SiNextdotjs, name: "Next.js", color: "text-white" },
+    { Icon: SiMongodb, name: "MongoDB", color: "text-green-500" },
+    { Icon: SiMysql, name: "MySQL", color: "text-blue-600" },
+    { Icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-500" },
+    { Icon: SiMoonrepo, name: "Monorepo", color: "text-purple-400" },
+    { Icon: SiTurborepo, name: "Turborepo", color: "text-red-500" },
+    { Icon: SiLinux, name: "Linux", color: "text-yellow-400" }
+  ];
 
-export default function Skills () {
   return (
-    <>
-      <div className="h-[60rem] flex flex-col justify-center items-center px-6">
+    <div className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className="mb-10 sm:mb-20 text-3xl sm:text-5xl font-bold text-center text-white">
-          Technologies I Work With
-        </h2>
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Technologies I Work With
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
+        </div>
 
-        {/* Skills and Logos Section */}
-        <div className="max-w-6xl mx-auto px-6 space-y-8">
-          {/* Introductory Text */}
-          <div className="text-center">
-            <p className="text-lg text-gray-300 leading-relaxed mb-8">
-              I specialize in creating modern, scalable web applications using a variety of technologies. Here's a snapshot of the tools I use:
-            </p>
-          </div>
+        {/* Introductory Text */}
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            I specialize in creating modern, scalable web applications using a variety of technologies. Here's a snapshot of the tools I use:
+          </p>
+        </div>
 
-          {/* Logos Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {/* JavaScript Logo */}
-            <div className="flex flex-col items-center">
-              <FaJsSquare className="w-16 h-16 text-yellow-500 mb-3" />
-              <span className="text-white font-medium">JavaScript</span>
+        {/* Tech Stack Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10">
+          {techStack.map(({ Icon, name, color }, index) => (
+            <div
+              key={name}
+              className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 group"
+              style={{ animationDelay: `${index * 50}ms` }}
+            >
+              <Icon className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 ${color} mb-3 transition-transform group-hover:scale-110`} />
+              <span className="text-white font-medium text-sm sm:text-base text-center">
+                {name}
+              </span>
             </div>
-             <div className="flex flex-col items-center">
-              <SiTypescript  className="w-16 h-16 text-blue-500 mb-3" />
-              <span className="text-white font-medium">Typescript</span>
-            </div>
-            {/* Node.js Logo */}
-            <div className="flex flex-col items-center">
-              <FaNodeJs className="w-16 h-16 text-green-500 mb-3" />
-              <span className="text-white font-medium">Node.js</span>
-            </div>
-
-            {/* Git Logo */}
-            <div className="flex flex-col items-center">
-              <FaGitAlt className="w-16 h-16 text-orange-500 mb-3" />
-              <span className="text-white font-medium">Git</span>
-            </div>
-
-            {/* React Logo */}
-            <div className="flex flex-col items-center">
-              <FaReact className="w-16 h-16 text-blue-500 mb-3" />
-              <span className="text-white font-medium">React</span>
-            </div>
-           <div className="flex flex-col items-center">
-              <FaAngular  className="w-16 h-16 text-red-500 mb-3" />
-              <span className="text-white font-medium">Angularjs</span>
-            </div>
-            {/* Docker Logo */}
-            <div className="flex flex-col items-center">
-              <FaDocker className="w-16 h-16 text-blue-500 mb-3" />
-              <span className="text-white font-medium">Docker</span>
-            </div>
-
-            {/* NPM Logo */}
-            <div className="flex flex-col items-center">
-              <FaNpm className="w-16 h-16 text-red-500 mb-3" />
-              <span className="text-white font-medium">NPM</span>
-            </div>
-
-            {/* TypeScript Logo */}
-             <div className="flex flex-col items-center">
-              <FaJava  className="w-16 h-16 text-red-500 mb-3" />
-              <span className="text-white font-medium">Java</span>
-            </div>
-             <div className="flex flex-col items-center">
-              <SiTailwindcss  className="w-16 h-16 text-blue-500 mb-3" />
-              <span className="text-white font-medium">Tailwind</span>
-            </div>
-             <div className="flex flex-col items-center">
-              <FaAws  className="w-16 h-16 text-white-500 mb-3" />
-              <span className="text-white font-medium">Aws</span>
-            </div>
-             <div className="flex flex-col items-center">
-              <FaCloud  className="w-16 h-16 text-blue-500 mb-3" />
-              <span className="text-white font-medium">Cloud</span>
-            </div>
-             <div className="flex flex-col items-center">
-              <FaGithub  className="w-16 h-16 text-white-500 mb-3" />
-              <span className="text-white font-medium">Git Hub</span>
-            </div>
-               <div className="flex flex-col items-center">
-              <SiKubernetes  className="w-16 h-16 text-blue-500 mb-3" />
-              <span className="text-white font-medium">Kubernetes</span>
-            </div>
-              <div className="flex flex-col items-center">
-              <SiNextdotjs  className="w-16 h-16 text-black-500 mb-3" />
-              <span className="text-white font-medium">Next.js</span>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <SiMongodb  className="w-16 h-16 text-green-500 mb-3" />
-              <span className="text-white font-medium">MongoDB</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiMysql  className="w-16 h-16 text-blue-500 mb-3" />
-              <span className="text-white font-medium">MySql</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiPostgresql  className="w-16 h-16 text-blue-500 mb-3" />
-              <span className="text-white font-medium">Postgresql</span>
-            </div>
-              <div className="flex flex-col items-center">
-              <SiMoonrepo  className="w-16 h-16 text-blue-500 mb-3" />
-              <span className="text-white font-medium">Monorepo</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiTurborepo  className="w-16 h-16 text-red-500 mb-3" />
-              <span className="text-white font-medium">Turborepo</span>
-            </div>
-             <div className="flex flex-col items-center">
-              <SiLinux  className="w-16 h-16 text-black-500 mb-3" />
-              <span className="text-white font-medium">Linux</span>
-            </div>
-
-
-          </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
