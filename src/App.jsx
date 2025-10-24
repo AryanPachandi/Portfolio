@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Mail, Github, Linkedin, ExternalLink, Menu, X, Code, Palette, Zap } from 'lucide-react';
 import Navigation from './Navigation.jsx';
 import { VortexDemo } from './VortexBackground.jsx';
-import {WavyBackgroundDemo} from './WavyBackground.jsx'
+
 import {WobbleCardDemo} from './Projects.jsx'
 // import Contact  from './Contact.jsx';
-import {TypewriterEffectSmoothDemo} from './Contact.jsx'
+import {Contact} from './Contact.jsx'
+import Skills from './Skills';
 
 const Portfolio = () => {
 
@@ -82,7 +83,10 @@ const Portfolio = () => {
       {/* Hero Section */}
 
       <VortexDemo/>
-      {/* <WavyBackgroundDemo/> */}
+      {/* <div className="animate-bounce">
+            scroll down
+            <ChevronDown className="w-8 h-8 mx-auto text-white/60" />
+          </div> */}
 
 
       {/* About Section */}
@@ -131,6 +135,9 @@ const Portfolio = () => {
         </div>
       </section>
 
+      <Skills />
+
+{/*proejct section */}
 <section id="projects" className="py-32 relative">
   <div className="max-w-7xl mx-auto px-6">
     <div className="text-center mb-20">
@@ -143,45 +150,11 @@ const Portfolio = () => {
 
   </div>
 </section>
+
+
       {/* Contact Section */}
-      {/* <Contact/> */}
-      <TypewriterEffectSmoothDemo/>
-      {/* <section id="contact" className="py-32 relative">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-            Let's Create Together
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-12" />
 
-          <p className="text-xl text-gray-300 mb-16 max-w-2xl mx-auto leading-relaxed">
-            Ready to bring your next project to life? I'd love to hear about your ideas and discuss how we can work together.
-          </p>
-
-          <div className="flex justify-center space-x-8 mb-16">
-            {[
-              { icon: Mail, label: 'Email', href: 'mailto:pachandiaryan@gmail.com' },
-              { icon: Github, label: 'GitHub', href: 'https://github.com/AryanPachandi/' },
-              { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/aryan-pachandi-bb7b6822a/' }
-            ].map((social) => {
-              const Icon = social.icon;
-              return (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="group p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-purple-500/20"
-                >
-                  <Icon className="w-8 h-8 text-gray-300 group-hover:text-purple-400 transition-colors duration-300" />
-                </a>
-              );
-            })}
-          </div>
-
-          <button className="group relative px-12 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
-            <span className="relative z-10">Start a Project</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </button>
-        </div>
-      </section> */}
+      <Contact/>
 
       {/* Footer */}
       <footer className="border-t border-white/10 py-8">
