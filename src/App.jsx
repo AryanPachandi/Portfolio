@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Mail, Github, Linkedin, ExternalLink, Menu, X, Code, Palette, Zap } from 'lucide-react';
 import Navigation from './Navigation.jsx';
 import { VortexDemo } from './VortexBackground.jsx';
+import {WavyBackgroundDemo} from './WavyBackground.jsx'
+import {WobbleCardDemo} from './Projects.jsx'
+// import Contact  from './Contact.jsx';
+import {TypewriterEffectSmoothDemo} from './Contact.jsx'
 
 const Portfolio = () => {
 
@@ -17,17 +21,25 @@ const Portfolio = () => {
   }, []);
 
     const projects = [
+
       {
-        title: "AI-Powered Notes",
-        description: "A modern analytics dashboard with real-time data visualization and machine learning insights.",
-        tech: ["React", "TypeScript", "D3.js", "Python"],
+        title: "APT ",
+        description: "A simple JWT library from scratch in JavaScript for signing, verifying, and decoding tokens using HS256.",
+        tech: ["javascript" , "oops" , "npm"],
         image: "bg-gradient-to-br from-purple-500 to-pink-600",
-        link: "https://github.com/AryanPachandi/ai-notes"
+        link: "https://www.npmjs.com/package/pachanditoken"
       },
+      // {
+      //   title: "AI-Powered Notes",
+      //   description: "A modern analytics dashboard with real-time data visualization and machine learning insights.",
+      //   tech: ["React", "TypeScript", "Python"],
+      //   image: "bg-gradient-to-br from-purple-500 to-pink-600",
+      //   link: "https://github.com/AryanPachandi/ai-notes"
+      // },
       {
         title: "E-Commerce Platform",
         description: "Full-stack e-commerce solution with advanced filtering, payment integration, and inventory management.",
-        tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
+        tech: ["Node.js", "JWT(Auth)","MongoDB"],
         image: "bg-gradient-to-br from-blue-500 to-cyan-600",
         link: "https://github.com/AryanPachandi/Basic__E-commerce_app"
       },
@@ -70,6 +82,7 @@ const Portfolio = () => {
       {/* Hero Section */}
 
       <VortexDemo/>
+      {/* <WavyBackgroundDemo/> */}
 
 
       {/* About Section */}
@@ -118,58 +131,22 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-32 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-              Featured Projects
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
-          </div>
+<section id="projects" className="py-32 relative">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="text-center mb-20">
+      <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+        Featured Projects
+      </h2>
+      <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
+    </div>
+     <WobbleCardDemo projects={projects}/>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-                 <a
-      key={project.title}
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 block"
-    >
-                <div className={`h-48 ${project.image} relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
-                  <div className="absolute top-4 right-4">
-                    <ExternalLink className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-300 backdrop-blur-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
+  </div>
+</section>
       {/* Contact Section */}
-      <section id="contact" className="py-32 relative">
+      {/* <Contact/> */}
+      <TypewriterEffectSmoothDemo/>
+      {/* <section id="contact" className="py-32 relative">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
             Let's Create Together
@@ -204,7 +181,7 @@ const Portfolio = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="border-t border-white/10 py-8">

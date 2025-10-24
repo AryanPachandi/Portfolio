@@ -4,7 +4,7 @@ import Hero from "./Hero.jsx";
 
 export function VortexDemo() {
   return (
-    <div className="relative h-screen w-full bg-black overflow-hidden">
+    <div className="  relative h-screen w-full bg-black overflow-hidden">
       {/* Vortex Background Layer */}
       <div className="absolute inset-0 z-0">
         <Vortex
