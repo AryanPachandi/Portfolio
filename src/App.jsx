@@ -30,13 +30,7 @@ const Portfolio = () => {
         image: "bg-gradient-to-br from-purple-500 to-pink-600",
         link: "https://www.npmjs.com/package/pachanditoken"
       },
-      // {
-      //   title: "AI-Powered Notes",
-      //   description: "A modern analytics dashboard with real-time data visualization and machine learning insights.",
-      //   tech: ["React", "TypeScript", "Python"],
-      //   image: "bg-gradient-to-br from-purple-500 to-pink-600",
-      //   link: "https://github.com/AryanPachandi/ai-notes"
-      // },
+
       {
         title: "E-Commerce Platform",
         description: "Full-stack e-commerce solution with advanced filtering, payment integration, and inventory management.",
@@ -44,13 +38,20 @@ const Portfolio = () => {
         image: "bg-gradient-to-br from-blue-500 to-cyan-600",
         link: "https://github.com/AryanPachandi/Basic__E-commerce_app"
       },
-      {
-        title: "Yashomangal Ganpati Mandal – Ganesh Utsav 2025 Celebrations",
-        description: "Yashomangal Society’s Ganpati Mandal welcomes you to our annual Ganesh Utsav. Explore schedules, rituals, cultural events, and highlights of our community celebration.",
-        tech: ["React Native", "Redux", "Node.js"],
-        image: "bg-gradient-to-br from-emerald-500 to-teal-600",
-        link: "https://github.com/AryanPachandi/society-ganpati-website"
-      }
+        {
+        title: "AI-Powered Notes",
+        description: "A modern analytics dashboard with real-time data visualization and machine learning insights.",
+        tech: ["React", "TypeScript", "Python"],
+        image: "bg-gradient-to-br from-purple-500 to-pink-600",
+        link: "https://github.com/AryanPachandi/ai-notes"
+      },
+      // {
+      //   title: "Yashomangal Ganpati Mandal – Ganesh Utsav 2025 Celebrations",
+      //   description: "Yashomangal Society’s Ganpati Mandal welcomes you to our annual Ganesh Utsav. Explore schedules, rituals, cultural events, and highlights of our community celebration.",
+      //   tech: ["React Native", "Redux", "Node.js"],
+      //   image: "bg-gradient-to-br from-emerald-500 to-teal-600",
+      //   link: "https://github.com/AryanPachandi/society-ganpati-website"
+      // }
     ];
 
   const skills = [

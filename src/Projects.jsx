@@ -132,13 +132,13 @@ export function WobbleCardDemo({ projects }) {
             </a>
 
           </div>
-          <img
+          {/* <img
           src={pro3}
           width={500}
           height={500}
           // alt="linear demo image"
           className="absolute right-0 lg:-right-[25%] bottom-0 w-[400px] md:w-[450px] lg:w-[500px]  opacity-90 rounded-2xl drop-shadow-lg"
-        />
+        /> */}
         </WobbleCard>
       )}
     </div>
