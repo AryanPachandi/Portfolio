@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Mail, Github, Linkedin, ExternalLink, Menu, X, Code, Palette, Zap } from 'lucide-react';
 import Navigation from './Navigation.jsx';
 import { VortexDemo } from './VortexBackground.jsx';
+import {BackgroundBeamsDemo} from './Background.jsx'
 
 import {WobbleCardDemo} from './Projects.jsx'
 // import Contact  from './Contact.jsx';
@@ -13,13 +14,21 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
+ useEffect(() => {
+  let frame;
+  const handleMouseMove = (e) => {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
       setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+    });
+  };
+
+  window.addEventListener('mousemove', handleMouseMove);
+  return () => {
+    window.removeEventListener('mousemove', handleMouseMove);
+    cancelAnimationFrame(frame);
+  };
+}, []);
 
     const projects = [
 
@@ -84,13 +93,7 @@ const Portfolio = () => {
       {/* Hero Section */}
 
       <VortexDemo/>
-      {/* <div className="animate-bounce">
-            scroll down
-            <ChevronDown className="w-8 h-8 mx-auto text-white/60" />
-          </div> */}
 
-
-      {/* About Section */}
       <section id="about" className="py-32 relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-20">

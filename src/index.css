@@ -3,3 +3,14 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  scroll-behavior: smooth;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+html, body {
+  -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
+  will-change: scroll-position;
+  backface-visibility: hidden;
+}

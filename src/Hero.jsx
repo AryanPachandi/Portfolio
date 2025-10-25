@@ -14,7 +14,7 @@ export default function Hero() {
           </div>
 
           {/* CV button */}
-          {/* <a
+          <a
             href="/Aryan_Pachandi_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -22,7 +22,7 @@ export default function Hero() {
           >
             Download CV
             <ExternalLink className="inline-block ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </a> */}
+          </a>
 
           {/* Text at the bottom */}
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
